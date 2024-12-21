@@ -1,0 +1,100 @@
+/**
+ * @fileoverview
+ * Stylesheet for the 'face.html' which creates the visual representation of a face that can express different emotions.
+ * This CSS file defines the layout, colors, and dimensions of facial features such as eyes, mouth, and eyelids.
+ */
+
+/* Root variables for easy theme management and consistent styling across the face components */
+:root {
+  --face-color: whitesmoke; /* Background color of the face */
+  --face-height: 100vh; /* Total height of the face, occupying full viewport height */
+  --face-width: 100vw; /* Total width of the face, occupying full viewport width */
+  --eye-size: 33.33vmin; /* Diameter of the eyes, responsive to viewport size */
+  --eye-color: #000000; /* Color of the eyes */
+  --eyelid-color: whitesmoke; /* Color of the eyelids, matching the face color */
+  --mouth-color: #ffc0cb; /* Color of the mouth, a soft pink */
+}
+
+/* General body styling to reset margins and set background matching the face */
+body {
+  background-color: whitesmoke;
+  margin: 0px; /* Removes default margin */
+}
+
+/* Styling for the face container */
+.face {
+  background-color: var(--face-color);
+  margin: auto; /* Centers the face horizontally */
+  height: var(--face-height);
+  width: var(--face-width);
+  position: relative; /* Allows absolute positioning of face features relative to this container */
+  overflow: hidden; /* Ensures nothing spills out of the face container */
+}
+
+/* General styling for facial feature divisions (used for eyes and mouth) */
+.face div {
+  position: absolute; /* Absolute positioning relative to their parent .face */
+}
+
+/* Specific styling for eyes */
+.eye {
+  background-color: var(--eye-color);
+  border-radius: 100%; /* Makes the eyes circular */
+  height: var(--eye-size);
+  width: var(--eye-size);
+  bottom: 35vmin; /* Positions the eyes vertically within the face */
+  z-index: 1; /* Ensures eyes are below the eyelids in layering */
+}
+
+/* Positioning for the left eye */
+.eye.left {
+  left: 15vmin;
+}
+
+/* Positioning for the right eye */
+.eye.right {
+  right: 15vmin;
+}
+
+/* Styling for eyelids */
+.eyelid {
+  background-color: var(--eyelid-color);
+  height: 23.33vmin; /* Height of the eyelids */
+  width: calc(
+    var(--eye-size) * 1.75
+  ); /* Width extends beyond the eye to fully cover it when closed */
+  z-index: 2; /* Ensures eyelids are above the eyes */
+}
+
+/* Positioning and specific styling for the upper eyelids */
+.eyelid.upper {
+  bottom: calc(
+    var(--eye-size) * 1
+  ); /* Positioning from the bottom of the eye */
+  left: calc(
+    var(--eye-size) * -0.35
+  ); /* Positioning from the center of the eye */
+}
+
+/* Positioning and specific styling for the lower eyelids */
+.eyelid.lower {
+  border-radius: 100%; /* Rounded bottom edge */
+  bottom: calc(
+    var(--eye-size) * -0.7
+  ); /* Positioning from the bottom of the eye */
+  left: calc(
+    var(--eye-size) * -0.375
+  ); /* Slight horizontal shift for natural appearance */
+}
+
+/* Styling for the mouth */
+.mouth {
+  background-color: var(--mouth-color);
+  position: absolute;
+  width: 30vmin; /* Responsive width */
+  height: 15vmin; /* Responsive height */
+  bottom: 50px; /* Vertical positioning */
+  left: 40%; /* Horizontal centering */
+  border-radius: 0% 0% 70% 70%; /* Rounded bottom for a smiling effect */
+  z-index: 3; /* Ensures the mouth is above all other face components */
+}

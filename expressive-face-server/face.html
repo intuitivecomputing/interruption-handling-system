@@ -1,0 +1,63 @@
+<!-- 
+    File Overview:
+    This HTML file creates the visual interface for an expressive face application.
+    It includes the structural markup for displaying facial features like eyes and mouth
+    which can change expression based on Socket.IO events.
+    
+    External Resources:
+    - face.css: Stylesheet for customizing the appearance of the face and its components.
+    - Google Fonts: Web font for enhanced text appearance.
+    - Socket.IO Client: Enables real-time, bidirectional communication with the server.
+    - Anime.js: JavaScript animation library used to animate facial expressions.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta tags for character set and responsive design -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Document title -->
+    <title>Eye Expressions</title>
+
+    <!-- External CSS files for styling -->
+    <link rel="stylesheet" href="face.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Main container for the face elements -->
+    <div class="face">
+      <!-- Left eye with upper and lower eyelids -->
+      <div class="eye left">
+        <div class="eyelid upper"></div>
+        <div class="eyelid lower"></div>
+      </div>
+      <!-- Mouth element -->
+      <div class="mouth"></div>
+      <!-- Right eye with upper and lower eyelids -->
+      <div class="eye right">
+        <div class="eyelid upper"></div>
+        <div class="eyelid lower"></div>
+      </div>
+    </div>
+
+    <!-- Script tags for external JavaScript libraries and local scripts -->
+    <!-- Load the Socket.IO client library -->
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <!-- Load the Anime.js library for animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <!-- Local JavaScript that controls the facial expressions -->
+    <script src="eyes.js"></script>
+  </body>
+</html>
+
+<!-- 
+    Notes:
+    - Ensure CORS settings on the server allow these external resources to be loaded.
+    - The JavaScript file 'eyes.js' handles all interactions and animations based on server events.
+    - This file should be served over a secure connection to ensure all resources load properly.
+-->

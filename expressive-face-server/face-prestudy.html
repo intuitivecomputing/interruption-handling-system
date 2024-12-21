@@ -1,0 +1,72 @@
+<!-- 
+  File Overview:
+  This HTML file serves as a testing interface for the Eye Expressions application, providing
+  buttons to manually trigger different facial animations such as breathing, listening, talking, etc.
+  It includes links to external CSS for styling and uses JavaScript for functionality.
+
+  External Resources:
+  - face.css: Custom styles for the appearance of the face and its components.
+  - Google Fonts: 'Bangers' font for any textual elements, not directly used here but can be utilized for future enhancements.
+  - Anime.js: Animation library used in conjunction with the eyes.js script to animate the facial features.
+  - Socket.IO Client: Enables real-time, bidirectional communication between the web clients and a server.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta tags for setting character set and viewport settings for responsive design -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title of the document shown in the browser tab -->
+    <title>Eye Expressions Testing Interface</title>
+
+    <!-- External CSS linked for styling the facial components -->
+    <link rel="stylesheet" href="face.css" />
+    <!-- Link to Google Fonts for typography -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Buttons for triggering different animations -->
+    <div class="buttons">
+      <!-- Each button has an onclick event that triggers a method from the eyes.js script -->
+      <button onclick="eyes.expressExcited()">1</button>            <!-- Excited -->
+      <button onclick="eyes.expressHappiness()">2</button>          <!-- Happy -->
+      <button onclick="eyes.expressListening()">3</button>          <!-- Neutral -->
+      <button onclick="eyes.expressSurprised()">4</button>          <!-- Surprised -->
+      <button onclick="eyes.expressInterested()">5</button>         <!-- Interested -->
+      <button onclick="eyes.expressConfused()">6</button>          <!-- Confused -->
+      <button onclick="eyes.expressThinking()">7</button>          <!-- Thinking -->
+      <button onclick="eyes.expressSatisfied()">8</button>          <!-- Satisfied -->
+      <button onclick="eyes.expressTesting()">Testing</button>          <!-- Testing -->
+      <button onclick="eyes.resetToOriginalState()">Reset</button>  <!-- Neutral -->
+    </div>
+
+    <!-- Visual representation of a face which will show animations -->
+    <div class="face">
+      <!-- Left eye with upper and lower eyelids -->
+      <div class="eye left">
+        <div class="eyelid upper"></div>
+        <div class="eyelid lower"></div>
+      </div>
+      <!-- Mouth component -->
+      <div class="mouth"></div>
+      <!-- Right eye with upper and lower eyelids -->
+      <div class="eye right">
+        <div class="eyelid upper"></div>
+        <div class="eyelid lower"></div>
+      </div>
+    </div>
+
+    <!-- External scripts required for functionality -->
+    <!-- Socket.IO client for real-time web socket communication -->
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <!-- Anime.js library for animation effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <!-- Eyes.js script that controls the animation logic -->
+    <script src="eyes.js"></script>
+  </body>
+</html>
