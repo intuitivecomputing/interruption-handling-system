@@ -25,9 +25,6 @@ Prerequisites:
 
 ## Usage
 To run the system, the sequence of commands are below:
-1. python connectML.py
-2. Run Human Response Robot Error Detector using DetectorMain.cs as the  “startup object”
-3. python connectPsiRobot.py
 
 - - - -
 ## Modifying System
