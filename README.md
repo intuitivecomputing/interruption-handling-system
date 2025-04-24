@@ -27,8 +27,7 @@ In the SocialRobot,
 
 
 - - - -
-## Modifying System
-We welcome development on the error-aware robotic system software to extend its error management capabilities and its applicability to different robots and different social signals.
+## Questions
 
 For questions that are not covered in this README, we welcome developers to open an issue or contact the author at [shiyecao@cs.jhu.edu](mailto:shiyecao@cs.jhu.edu). 
 
