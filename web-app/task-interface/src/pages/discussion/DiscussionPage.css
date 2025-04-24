@@ -1,0 +1,66 @@
+/* DiscussionPage.css */
+.discussion {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+}
+
+.h1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.instruc {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 25px;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.next-button {
+    padding: 10px 20px;
+    font-size: 30px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    margin-top: 40px;
+}
+
+.next-button:hover {
+    background-color: #45a049;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.topic-box {
+    padding: 20px;
+    margin: 20px auto;
+    border: 2px solid #b9b9b9; /* Match the button color for design consistency */
+    border-radius: 15px;
+    background-color: #f9f9f9; /* Light background to make the box stand out */
+    max-width: 80%; /* Manage the width of the box */
+}
+
+.topic {
+    font-size: 25px; /* Adjust font size as needed */
+    color: #000000; /* Darker text for better readability */
+    text-align: center; /* Align text to the left inside the box */
+}

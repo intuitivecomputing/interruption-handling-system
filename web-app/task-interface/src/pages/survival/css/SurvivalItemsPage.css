@@ -1,0 +1,146 @@
+/* DesertItemsPage.css */
+.item-selection {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+  }
+  
+.base-title {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+  .instruc {
+    font-size: 25px;
+    margin-bottom: 20px;
+    max-width: 80%;
+  }
+  
+  .object-lists {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 50px;
+  }
+  
+  .object-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    height: 400px;
+    font-size: 20px;
+    box-sizing: border-box;
+  }
+
+  .object-item {
+    margin: 10px;
+    padding: 15px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    width: 450px;
+    
+    text-align: center;
+  }
+  
+.placeholder {
+  margin: 10px;
+  padding: 10px;
+  background-color: #b4b4b4;
+  border: 1px solid #ccc;
+  width: 450px;
+  height: 400px;
+  text-align: center;
+  font-size: 20px;
+
+}
+  
+  .object-item.selected {
+    background-color: #d0d0d0;
+  }
+  
+  .sorted-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fafafa;
+    margin-top: 20px;
+    width: auto;
+    height: 500px;
+    box-sizing: border-box;
+  }
+  
+  .done-button, .next-button {
+    padding: 10px 20px;
+    font-size: 30px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    margin-top: 70px;
+  }
+  
+  .done-button:hover, .next-button:hover {
+    background-color: #45a049;
+  }
+
+  .thank-you {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 20px 0;
+    margin-top: -100px;
+    width: 80%;
+
+}
+
+  .thank-you h1 {
+    font-size: 40px;
+    font-weight: bold;
+  }
+  
+  .modal {
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+  }
+  
+  .close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close-button:hover,
+  .close-button:focus {
+    color: black;
+    text-decoration: none;
+  }  
