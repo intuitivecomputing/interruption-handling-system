@@ -19,12 +19,12 @@ Prerequisites:
 - - - -
 
 ## Contents
-
+In the SocialRobot, 
 
 - - - -
 
 ## Usage
-To run the system, the sequence of commands are below:
+
 
 - - - -
 ## Modifying System
@@ -38,8 +38,8 @@ For questions that are not covered in this README, we welcome developers to open
 If you use our system in a scientific publication, please cite our work:
 ```
 @inproceedings{cao2025Interruption,
-  title={On Using Social Signals to Enable Flexible Error-Aware HRI},
+  title={Interruption Handling for Conversational Robots},
   author={Cao, Shiye and Moon, Jiwon and Mahmood, Amama and Antony, Victor Nikhil and Xiao, Ziang and Liu, Anqi and Huang, Chien-Ming},
-  year={2023}
+  year={2025}
 }
 ```
