@@ -19,12 +19,55 @@ Prerequisites:
 - - - -
 
 ## Contents
-In the SocialRobot, 
+In overview, the SocialRobot folder contains files to run the main psi program. The expressive-face-server contains the web app that dispays the robot's face. The google-speech-to-text folder contains the python script that runs the speech recognition and wakeword detection service. The head-server folder contains the head code for the arduino as well as the python head server that communicates between Psi and the Arduino. The web-app folder contains files to run the React web app containing the task information. 
+
+## SocialRobot
+There are three folders each containing the program to run for each task (practice, discussion, survival) in the study. Each folder contains the following files: a Google speech to text component, (_GoogleSpeechToTextComponent_), a Google text to speech component (_GoogleTextToSpeechComponent_), a component for classifying the type of interruption (LLMInterruptionHandlingComponent), a component to generate robot behavior (_LLMResponseComponent_), timer helper components (_TimerSecondsComponent_), and the main program. 
+
+Open the SocialRobot.solutions in visual studios to select the program to run. 
+_prompts.json_ contains all the prompts used in the study by the social robot programs. 
+
+## expressive-face-server
+_face.css _ contains the source code for the hand-crafted robot facial expressions. New facial expressions can be crafted by adjusting the positions and timing of the elements. 
+_face.html_ displays the robot face called by the API. 
+_face-testing.html_ display buttons to select the facial expression to display to help with testing. 
+_server.js_ contains an Express server that takes HTTP requires to change the robot's facial expressions displayed on _face.html_. 
+
+## google-speech-to-text
+_google-speech-to-text-luna-experimental.py_ contains a program that runs the google speech to text service and detects the wakewords ("Luna" and "stop") from the transcribed interim speech. 
+
+## head-server
+The _head_movement_arduino_ folder contains a _head_movement_arduino.ino_ program that controls three servo motors in the robot. 
+_test.py_ contains a program to help test the connection to the arduino. 
+_testServer.py_ contains a program to help communicate head movements between main psi program and the arduino. 
+
+## 
 
 - - - -
 
 ## Usage
 
+### Expressive Face
+To launch the expressive face component:
+1. Start the expressive face server:
+  ```
+  cd expressive-face-server
+  python server.js
+  ```
+2. Open `face.html` in your browser to view the animated robot face.
+
+### Task Interface
+To launch the task interface:
+1. Start the task server:
+  ```
+  cd web-app
+  python server.js
+  ```
+2. Run the task interface web application:
+  ```bash
+  cd task-interface
+  npm start
+  ```
 
 - - - -
 ## Questions
