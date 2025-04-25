@@ -41,7 +41,8 @@ The _head_movement_arduino_ folder contains a _head_movement_arduino.ino_ progra
 _test.py_ contains a program to help test the connection to the arduino. 
 _testServer.py_ contains a program to help communicate head movements between main psi program and the arduino. 
 
-## 
+## web-app
+The _task-interface_ folder contains code for React App displaying the task interface for the study. There is an initial screen where the experimenter may choose the order at which tasks appear. The practice task always appears first. The python backend (_server.js_) communicates with the Psi program to signal the robot when the task begins and when the user makes changes to the task interface during the survival task. 
 
 - - - -
 
